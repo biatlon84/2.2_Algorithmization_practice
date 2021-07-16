@@ -2,6 +2,8 @@ package com.epam.training.task_6;
 
 import java.util.Scanner;
 
+//Form a square matrix of order n according to a given
+//pattern (N is even)
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

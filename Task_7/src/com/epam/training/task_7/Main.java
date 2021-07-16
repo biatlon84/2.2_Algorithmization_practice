@@ -2,20 +2,22 @@ package com.epam.training.task_7;
 
 import java.util.Scanner;
 
+//Form a square matrix of order n according to the rule: a [i, j] = sin ((i ^ 2 - j ^ 2) / n)
+//and count the number of positive elements in it.
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = 0;
 
 		boolean ag = true;
-		System.out.println("Type N (N is even)");
+		System.out.println("Type N");
 		while (ag) {
 
 			while (!sc.hasNextInt()) {
 				System.out.println(sc.next() + " is not INT");
 			}
 			n = sc.nextInt();
-			if (n >= 0 && (n % 2 == 0)) {
+			if (n >= 0) {
 				ag = false;
 			} else {
 				System.out.println(n + " is not even or positive");
@@ -32,6 +34,6 @@ public class Main {
 
 		print.out(ar);
 		System.out.println("There are " + cou_pos.pos(ar) + " positive elements");
-		System.out.println("Total number of elements " + cou_pos.whole);
+		System.out.println("Total number of elements " + n * n);
 	}
 }
