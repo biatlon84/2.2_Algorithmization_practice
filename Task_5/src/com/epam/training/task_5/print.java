@@ -1,4 +1,4 @@
-package com.epam.training.task_4;
+package com.epam.training.task_5;
 
 public class print {
 
