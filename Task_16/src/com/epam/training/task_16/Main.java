@@ -4,38 +4,22 @@ package com.epam.training.task_16;
 public class Main {
 	public static void main(String args[]) {
 		int n = 0;
-		boolean b = true;
-		sum_r sm = new sum_r();
 		scann sc = new scann();
-		System.out.println("enter 2 or 3 or 4\n>>");
-		n = sc.s(5);
-
-		int[][] ar = new int[n][n];
+		System.out.println("Please enter base of magic squares\n>>");
+		n = sc.s(7);
+		// -----------------
 		long fact = 1;
-
+		int zz = ((n * n + 1) * n) / 2;
 		for (int i = 2; i <= n * n; i++) {
 			fact = fact * i;
 		}
-		System.out.println("it will be antil " + fact + " matrxs");
-		System.out.println("each namber means 10000 matrxs");
-		long fk = 0;
-		while (fk < fact) {
-			b = false;
-			do {
-				ar = mass.cr(n, fk);
-				b = sm.s(ar, n);
-				fk++;
-				if ((fk % 10000) == 0) {
-					System.out.print((fk / 10000) + " ");
-				}
-			} while ((!b) && (fk < fact));
-			System.out.print("\n" + fk + "'th matrx is ");
-			System.out.print(b + " magic");
-			printA.ar(ar);
-			System.out.print("\n");
+		// --------------
+		System.out.println("For magic squares with " + n * n + " numbers the magic constant is : " + zz + "");
+		System.out.println("The search will be up to the " + fact + "th matrix");
+		if (n > 3) {
+			System.out.println("each number means 0.1 billion matrices");
 		}
+		MagicSearcher.search(zz, n);
 		System.out.print("finish");
 	}
-
-	/// printA.ar(mass.marr);
 }
